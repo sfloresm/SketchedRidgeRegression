@@ -1,5 +1,5 @@
 # executor-cores
-1
+2
 # driver-memory
 2G
 # executor-memory

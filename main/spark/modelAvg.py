@@ -369,12 +369,14 @@ def runModelAvgSpark(rddLabelVectorTrain, rddLabelVectorTest, param):
 
 def parseConfig(inputDir, configFile):
     listStr = numpy.loadtxt(inputDir + configFile, dtype='str', comments='#')
+    #print('executors=' +listStr[0])
+    #print('driverMemory=' +listStr[1])
     dirConfig = {"numExecutors": os.environ["NUM_EXECUTORS"],
-                 "executorCores": int(listStr[0][2:-1]),
-                 "driverMemory": listStr[1][2:-1],
-                 "executorMemory": listStr[2][2:-1],
-                 "trainFile": listStr[3][2:-1],
-                 "testFile": listStr[4][2:-1]
+                 "executorCores": int(listStr[0]),
+                 "driverMemory": listStr[1],
+                 "executorMemory": listStr[2],
+                 "trainFile": listStr[3],
+                 "testFile": listStr[4]
                 }
     return dirConfig
 

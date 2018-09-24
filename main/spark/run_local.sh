@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-export INPUT_DIR="$HOME/Code/SketchedRidgeRegression"
-export NUM_EXECUTORS="678"
+export INPUT_DIR="$HOME/Dropbox/Papers/L1_Leverage/code/SketchedRidgeRegression"
+export NUM_EXECUTORS="4"
 
-SPARK_HOME="$HOME/Software/spark-2.0.2"
+SPARK_HOME="$HOME/spark-2.0.1"
 MASTER="local"
 PYTHON_FILE="$INPUT_DIR/main/spark/modelAvg.py"
 
